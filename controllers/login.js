@@ -17,7 +17,7 @@ router.post('/', (req, res)=>{
 		if(status == 3){
 			res.cookie('uname', req.body.username);
 			res.cookie('id', req.body.id);
-			res.redirect('/Delivery_home');
+			res.redirect('/Delivery/Delivery_home');
 		}
 		else{
 			res.redirect('/login');

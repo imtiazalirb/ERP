@@ -4,7 +4,7 @@ const exSession 		= require('express-session');
 const cookieParser 		= require('cookie-parser');
 const login				= require('./controllers/login');
 //const logout			= require('./controllers/logout');
-const delivery_home		= require('./controllers/Delivery_home');
+const delivery_home		= require('./controllers/Delivery/Delivery_home');
 //const employee_home		= require('./controllers/Employee_home');
 //const user				= require('./controllers/user');
 //const job				= require('./controllers/job');
@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(exSession({secret: 'secret value', saveUninitialized: true, resave: false}));
 
 app.use('/login', login);
-app.use('/Delivery_home', delivery_home);
+app.use('/Delivery/Delivery_home', delivery_home);
 //app.use('/Employee_home',employee_home);
 //app.use('/logout', logout);
 //app.use('/user', user);

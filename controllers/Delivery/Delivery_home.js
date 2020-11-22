@@ -11,7 +11,7 @@ router.get('*',  (req, res, next)=>{
 });
 
 router.get('/', (req, res)=>{
-	res.render('Delivery_home/index', {name: 'imtiaz', id:'cookie.'});
+	res.render('Delivery/index', {name: 'imtiaz', id:'cookie.'});
 });
 
 
