@@ -16,6 +16,7 @@ router.post('/', (req, res)=>{
 	userModel.validate(user, function(status){
 		if(status == 3){
 			res.cookie('uname', req.body.username);
+			res.cookie('id', req.body.id);
 			res.redirect('/Delivery_home');
 		}
 		else{
