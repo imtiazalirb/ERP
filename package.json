@@ -1,0 +1,34 @@
+{
+  "name": "erp",
+  "version": "1.0.0",
+  "description": "ERP project",
+  "main": "app.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "ejs-json": "^1.0.4",
+    "express": "^4.17.1",
+    "express-json": "^1.0.0",
+    "express-session": "^1.17.1",
+    "express-session-json": "^0.0.8",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imtiazalirb/ERP.git"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "mysql"
+  ],
+  "author": "Imtiaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imtiazalirb/ERP/issues"
+  },
+  "homepage": "https://github.com/imtiazalirb/ERP#readme"
+}
