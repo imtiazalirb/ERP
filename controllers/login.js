@@ -13,15 +13,23 @@ router.post('/', (req, res)=>{
 		password: req.body.password
 	};
 
-	userModel.validate(user, function(status){
-		if(status == 3){
-			res.cookie('uname', req.body.username);
-			res.cookie('id', req.body.id);
-			res.redirect('/Delivery/Delivery_home');
-		}
-		else{
-			res.redirect('/login');
-		}
+	userModel.validate(user, function(result){
+			console.log(result);
+			var status = JSON.stringify(result.user_type);
+			var uid = JSON.stringify(result.user_id);
+			console.log(status);
+			if(status == 3){
+				res.cookie('uname', req.body.username);
+				res.cookie('id', parseInt(uid));
+				//res.exSession.id= parseInt(id);
+				res.redirect('/Delivery/Delivery_home');
+			}
+			else{
+				//res.redirect('/');
+				console.log("Invalid");
+			    res.send("Invalid Username or password");
+				//res.redirect('/login');
+			}
 	});
 });
 
